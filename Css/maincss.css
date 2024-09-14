@@ -1,0 +1,287 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+}
+
+header {
+	background-color: #333;
+	color: #fff;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+footer {
+	background-color: #333;
+	color: #fff;
+	text-align: center;
+	padding: 10px;
+}
+
+h1 {
+	margin: 0;
+}
+
+/* nav bar stuff */
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+nav li {
+	margin: 0 10px;
+}
+
+nav li a {
+	display: block;
+	color: #fff;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	background-color: transparent; /* add a transparent border to all navbar items */
+}
+
+nav a.active {
+	background-color: black;
+}
+
+nav a:hover {
+	background-color: black;
+}
+
+nav li:hover a:not(.active) {
+	background-color: grey;
+}
+
+
+main {
+	margin: 0 auto;
+	max-width: 800px;
+	padding: 20px;
+	/* opacity: 1;
+  	transition: opacity 0.3s ease-out; */
+}
+/* .fade-out {
+	opacity: 0;
+  }
+  .fade-in {
+	opacity: 1;
+  } */
+section {
+	margin-bottom: 40px;
+}
+
+/* artwork display */
+.artwork {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 20px;
+  }
+  
+  .artwork img {
+	max-width: 100%;
+	height: auto;
+  }
+
+
+.artwork img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.artwork img:hover {
+    transform: scale(1.1);
+}
+
+
+/* This is all for the contact form */
+input {
+	width: 100%;
+	max-width: 700px; /* set the maximum width of the input box */
+	padding: 10px;
+	border: 1px solid black;
+	border-radius: 4px;
+  }
+
+textarea {
+	width: 100%;
+	max-width: 700px; /* set the maximum width of the input box */
+	height: 100%;
+	height: 300px;
+	padding: 10px;
+	border: 1px solid black;
+	border-radius: 4px;
+  }
+
+  .form-group {
+	margin-bottom: 10px;
+  }
+
+  button[type="send"] {
+	background-color: #4CAF50;
+	color: white;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+  }
+
+  button[type="send"]:hover {
+	background-color: darkgreen;
+  }
+
+
+
+ 
+
+/* 
+This is for if we want fancy gifs */
+  .gif {
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+
+  /* .fade-in {
+	animation: fadeIn ease 0.5;
+	-webkit-animation: fadeIn ease 0.5s;
+	-moz-animation: fadeIn ease 0.5s;
+	-o-animation: fadeIn ease 0.5s;
+	-ms-animation: fadeIn ease 0.5s;
+  }@keyframes fadeIn {
+	0% {
+	  opacity:0;
+	}
+	100% {
+	  opacity:1;
+	}
+  }
+  
+  @-moz-keyframes fadeIn {
+	0% {
+	  opacity:0;
+	}
+	100% {
+	  opacity:1;
+	}
+  }
+  
+  @-webkit-keyframes fadeIn {
+	0% {
+	  opacity:0;
+	}
+	100% {
+	  opacity:1;
+	}
+  }
+  
+  @-o-keyframes fadeIn {
+	0% {
+	  opacity:0;
+	}
+	100% {
+	  opacity:1;
+	}
+  }
+  
+  @-ms-keyframes fadeIn {
+	0% {
+	  opacity:0;
+	}
+	100% {
+	  opacity:1;
+  }
+  } */
+
+  /* .fade-out {
+	animation: fadeOut ease 8s;
+	-webkit-animation: fadeOut ease 8s;
+	-moz-animation: fadeOut ease 8s;
+	-o-animation: fadeOut ease 8s;
+	-ms-animation: fadeOut ease 8s;
+  }@keyframes fadeOut {
+	0% {
+	  opacity:1;
+	}
+	100% {
+	  opacity:0;
+	}
+  }
+  
+  @-moz-keyframes fadeOut {
+	0% {
+	  opacity:1;
+	}
+	100% {
+	  opacity:0;
+	}
+  }
+  
+  @-webkit-keyframes fadeOut {
+	0% {
+	  opacity:1;
+	}
+	100% {
+	  opacity:0;
+	}
+  }
+  
+  @-o-keyframes fadeOut {
+	0% {
+	  opacity:1;
+	}
+	100% {
+	  opacity:0;
+	}
+  }
+  
+  @-ms-keyframes fadeOut {
+	0% {
+	  opacity:1;
+	}
+	100% {
+	  opacity:0;
+  }
+} */
+
+	/* .fade-out {
+	opacity: 0;
+	transition: opacity 0.5s ease-out;
+  }
+
+  .fade-in {
+	opacity: 1;
+	transition: opacity 0.5s ease-in;
+  } */
+  
+/*   
+this is for fading pages with JS
+  .fade-out {
+	opacity: 0;
+	transition: opacity 0.5s ease-out;
+  }
+   
+  .fade-in {
+	opacity: 1;
+	transition: opacity 0.5s ease-in;
+  }  */
