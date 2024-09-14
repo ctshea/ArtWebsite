@@ -9,6 +9,7 @@ const links = document.querySelectorAll('nav a');
 // select the content container element
 const content = document.getElementById('main');
 
+
 // loop through each link
 links.forEach(link => {
   // add click event listener
