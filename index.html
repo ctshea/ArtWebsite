@@ -9,8 +9,16 @@
 <body>
 	<header>
 		<h1>ART Portfolio</h1>
+
+		<!-- Hamburger Icon (Visible only on mobile) -->
+		<div class="hamburger" onclick="toggleMenu()">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+
 		<nav>
-			<ul>
+			<ul id="nav links">
 				<li><a href="index.html" class="active">All Work</a></li>
 				<li><a href="Illustrations.html">Illustrations</a></li>
 				<li><a href="CharacterDesign.html">Character Design</a></li>
@@ -24,8 +32,10 @@
 						<li><a href="Socials.html">Socials</a></li>
 					</ul>
 				</li>
-
 				<li><a href="Contact.html">Contact</a></li>
+
+				<li><a href="javascript:void(0);" class="close-nav" onclick="toggleMenu()">×</a></li>
+
 			</ul>
 		</nav>
 	</header>

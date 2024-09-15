@@ -315,4 +315,114 @@ textarea {
 		max-width: 800px; /* Limit the main content width on larger screens */
 		padding: 20px;
 	}
+
+	.hamburger {
+		display: none;
+	}
+	#nav-links {
+		display: flex; /* Show nav normally on larger screens */
+		position: static;
+		flex-direction: row;
+		height: auto;
+		background-color: transparent;
+	}
+
+	#nav-links li {
+		margin: 0 10px;
+	}
+
+	#nav-links .close-nav {
+		display: none; /* Hide the close button on desktop */
+	}
+
+	.dropdown-content {
+		position: absolute;
+		display: none;
+	}
+
+	.dropdown:hover .dropdown-content {
+		display: block;
+	}
+}
+
+/* Default (Mobile-first) Hamburger Menu */
+.hamburger {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	width: 30px;
+	height: 24px;
+	cursor: pointer;
+	z-index: 3;
+}
+
+.hamburger span {
+	display: block;
+	height: 3px;
+	width: 100%;
+	background-color: white;
+	transition: all 0.3s ease-in-out;
+}
+
+/* Hide Navbar on Mobile by default */
+#nav-links {
+	display: none; /* Initially hide the nav on mobile */
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #333;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	z-index: 2;
+}
+
+	#nav-links li {
+		margin: 20px 0;
+	}
+
+	#nav-links a {
+		font-size: 24px;
+		color: #fff;
+		text-decoration: none;
+	}
+
+	/* Close button (X) inside the navbar */
+	#nav-links .close-nav {
+		position: absolute;
+		top: 10px;
+		right: 20px;
+		font-size: 36px;
+		color: white;
+	}
+
+	/* Show the navbar when open */
+	#nav-links.open {
+		display: flex;
+	}
+
+/* Hide the hamburger menu on larger screens */
+@media only screen and (min-width: 768px) {
+	.hamburger {
+		display: none;
+	}
+
+	/* Show the navbar by default on larger screens */
+	#nav-links {
+		display: flex;
+		position: static;
+		flex-direction: row;
+		height: auto;
+		background-color: transparent;
+	}
+
+		#nav-links li {
+			margin: 0 10px;
+		}
+
+		#nav-links .close-nav {
+			display: none;
+		}
 }
