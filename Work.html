@@ -33,34 +33,73 @@
 			<h2>Welcome to my Art Portfolio!</h2>
 			<p>Here you can find some of my latest artwork:</p>
 			<div class="artwork">
-				<img src="Art/All Work/Citrus1.png" alt="Citrus">
-				<img src="Art/All Work/Citrus2.png" alt="Citrus 2">
-				<img src="Art/All Work/Kubo.jpg" alt="Kubo">
-				<img src="Art/All Work/TMNT_Arcade.png" alt="TMNT Arcade" class="wide">
-				<img src="Art/All Work/TMNT_Store.png" alt="TMNT Store">
-				<img src="Art/All Work/TMNT_Tub.jpg" alt="TMNT Washing Tub">
-				<img src="Art/All Work/Polar_Bear.gif" alt="Polar Bear in The Snow">
-				<img src="Art/All Work/TMNT_Rink.jpg" alt="TMNT Hockey Rink" class="wide">
-				<img src="Art/All Work/Saloon1.png" alt="Saloon">
-				<img src="Art/All Work/Saloon2.png" alt="Saloon">
-				<img src="Art/All Work/Saloon3.png" alt="Saloon">
-				<img src="Art/All Work/Mural_Design.png" alt="Mural">
+				<img src="Art/All Work/Citrus1.png" alt="Citrus" onclick="openModal(0)">
+				<img src="Art/All Work/Citrus2.png" alt="Citrus 2" onclick="openModal(1)">
+				<img src="Art/All Work/Kubo.jpg" alt="Kubo" onclick="openModal(2)">
+				<img src="Art/All Work/TMNT_Arcade.png" alt="TMNT Arcade" class="wide" onclick="openModal(3)">
+				<img src="Art/All Work/TMNT_Store.png" alt="TMNT Store" onclick="openModal(4)">
+				<img src="Art/All Work/TMNT_Tub.jpg" alt="TMNT Washing Tub" onclick="openModal(5)">
+				<img src="Art/All Work/Polar_Bear.gif" alt="Polar Bear in The Snow" onclick="openModal(6)">
+				<img src="Art/All Work/TMNT_Rink.jpg" alt="TMNT Hockey Rink" class="wide" onclick="openModal(7)">
+				<img src="Art/All Work/Saloon1.png" alt="Saloon" onclick="openModal(8)">
+				<img src="Art/All Work/Saloon2.png" alt="Saloon" onclick="openModal(9)">
+				<img src="Art/All Work/Saloon3.png" alt="Saloon" onclick="openModal(10)">
+				<img src="Art/All Work/Mural_Design.png" alt="Mural"  onclick="openModal(11)">
 				<video controls>
-					<source src="Art/All Work/Grocery_Store.mp4" type="video/mp4">
+					<source src="Art/All Work/Grocery_Store.mp4" type="video/mp4"  onclick="openModal(12)">
 					Your browser does not support the video tag.
 				</video>
-				<img src="Art/All Work/CoralinePattern1.jpg" alt="Coraline Pattern">
-				<img src="Art/All Work/CoralinePattern2.jpg" alt="Coraline Pattern">
-				<img src="Art/All Work/CoralinePattern3.jpg" alt="Coraline Pattern">
-				<img src="Art/All Work/CoralinePattern4.png" alt="Coraline Pattern">
-				<img src="Art/All Work/pattern1.jpg" alt="Pattern">
-				<img src="Art/All Work/pattern2_1.jpg" alt="Pattern">
-				<img src="Art/All Work/pattern2_2.png" alt="Pattern">
-				<img src="Art/All Work/pattern2_3.png" alt="Pattern">
-				<img src="Art/All Work/pattern3_1.png" alt="Pattern">
-				<img src="Art/All Work/pattern3_2.png" alt="Pattern">
-				<img src="Art/All Work/pattern3_3.png" alt="Pattern">
+<!--				<video src="Art/All Work/Grocery_Store.mp4" onclick="openModal(12)"muted></video>-->
+				<img src="Art/All Work/CoralinePattern1.jpg" alt="Coraline Pattern" onclick="openModal(13)">
+				<img src="Art/All Work/CoralinePattern2.jpg" alt="Coraline Pattern" onclick="openModal(14)">
+				<img src="Art/All Work/CoralinePattern3.jpg" alt="Coraline Pattern" onclick="openModal(15)">
+				<img src="Art/All Work/CoralinePattern4.png" alt="Coraline Pattern" onclick="openModal(16)">
+				<img src="Art/All Work/pattern1.jpg" alt="Pattern" onclick="openModal(17)">
+				<img src="Art/All Work/pattern2_1.jpg" alt="Pattern" onclick="openModal(18)">
+				<img src="Art/All Work/pattern2_2.png" alt="Pattern" onclick="openModal(19)">
+				<img src="Art/All Work/pattern2_3.png" alt="Pattern" onclick="openModal(20)">
+				<img src="Art/All Work/pattern3_1.png" alt="Pattern" onclick="openModal(21)">
+				<img src="Art/All Work/pattern3_2.png" alt="Pattern" onclick="openModal(22)">
+				<img src="Art/All Work/pattern3_3.png" alt="Pattern" onclick="openModal(23)">
 			</div>
+
+			<div id="imageModal" class="modal">
+				<span class="close" onclick="closeModal()">&times;</span>
+				<img class="modal-content" id="modalImage">
+				<video class="modal-content" id="modalVideo" style="display: none;" controls></video>
+
+				<a class="prev" onclick="changeImage(-1)">&#10094;</a>
+				<a class="next" onclick="changeImage(1)">&#10095;</a>
+			</div>
+
+			<script>
+                const images = [
+                    "Art/All Work/Citrus1.png",
+                    "Art/All Work/Citrus2.png",
+                    "Art/All Work/Kubo.jpg",
+                    "Art/All Work/TMNT_Arcade.png",
+                    "Art/All Work/TMNT_Store.png",
+                    "Art/All Work/TMNT_Tub.jpg",
+                    "Art/All Work/Polar_Bear.gif",
+                    "Art/All Work/TMNT_Rink.jpg",
+                    "Art/All Work/Saloon1.png",
+                    "Art/All Work/Saloon2.png",
+                    "Art/All Work/Saloon3.png",
+                    "Art/All Work/Mural_Design.png",
+					"Art/All Work/Grocery_Store.mp4",
+                    "Art/All Work/CoralinePattern1.jpg",
+                    "Art/All Work/CoralinePattern2.jpg",
+                    "Art/All Work/CoralinePattern3.jpg",
+                    "Art/All Work/CoralinePattern4.png",
+                    "Art/All Work/pattern1.jpg",
+                    "Art/All Work/pattern2_1.jpg",
+                    "Art/All Work/pattern2_2.png",
+                    "Art/All Work/pattern2_3.png",
+                    "Art/All Work/pattern3_1.png",
+                    "Art/All Work/pattern3_2.png",
+                    "Art/All Work/pattern3_3.png"
+                ]
+			</script>
 		</section>
 	</main>
 	<footer>

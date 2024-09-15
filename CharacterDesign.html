@@ -33,13 +33,32 @@
 			<h2>Welcome to my Art Portfolio!</h2>
 			<p>Here you can find some of my latest artwork:</p>
 			<div class="artwork">
-				<img src="Art/Illustrations/TMNT_Rink.jpg" alt="TMNT Hockey Rink" class="wide">
-				<img src="Art/Illustrations/Kubo.jpg" alt="Kubo">
-				<img src="Art/Illustrations/TMNT_Store.png" alt="TMNT Store">
-				<img src="Art/Illustrations/TMNT_Tub.jpg" alt="TMNT Washing Tub">
-				<img src="Art/Illustrations/TMNT_Arcade.png" alt="TMNT Arcade" class="wide">
-				<img src="Art/Illustrations/Polar_Bear.gif" alt="Polar Bear in The Snow">
+				<img src="Art/CharacterDesign/TMNT_Rink.jpg" alt="TMNT Hockey Rink" class="wide" onclick="openModal(0)">
+				<img src="Art/CharacterDesign/Kubo.jpg" alt="Kubo" onclick="openModal(1)">
+				<img src="Art/CharacterDesign/TMNT_Store.png" alt="TMNT Store" onclick="openModal(2)">
+				<img src="Art/CharacterDesign/TMNT_Tub.jpg" alt="TMNT Washing Tub" onclick="openModal(3)">
+				<img src="Art/CharacterDesign/TMNT_Arcade.png" alt="TMNT Arcade" class="wide" onclick="openModal(4)">
+				<img src="Art/CharacterDesign/Polar_Bear.gif" alt="Polar Bear in The Snow" onclick="openModal(5)">
 			</div>
+
+			<div id="imageModal" class="modal">
+				<span class="close" onclick="closeModal()">&times;</span>
+				<img class="modal-content" id="modalImage">
+
+				<a class="prev" onclick="changeImage(-1)">&#10094;</a>
+				<a class="next" onclick="changeImage(1)">&#10095;</a>
+			</div>
+
+			<script>
+				const images = [
+					"Art/CharacterDesign/TMNT_Rink.jpg",
+                    "Art/CharacterDesign/Kubo.jpg",
+					"Art/CharacterDesign/TMNT_Store.png",
+					"Art/CharacterDesign/TMNT_Tub.jpg",
+                    "Art/CharacterDesign/TMNT_Arcade.png",
+                    "Art/CharacterDesign/Polar_Bear.gif",
+				]
+			</script>
 		</section>
 	</main>
 	<footer>

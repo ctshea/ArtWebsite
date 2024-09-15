@@ -1,4 +1,65 @@
-// document.addEventListener('DOMContentLoaded', () => {
+
+/*const images = [
+    "Art/All Work/Citrus1.png",
+    "Art/All Work/Citrus2.png",
+    "Art/All Work/Kubo.jpg",
+    "Art/All Work/TMNT_Arcade.png",
+    "Art/All Work/TMNT_Store.png",
+    "Art/All Work/TMNT_Tub.jpg",
+    "Art/All Work/Polar_Bear.gif",
+    "Art/All Work/TMNT_Rink.jpg",
+    "Art/All Work/Saloon1.png",
+    "Art/All Work/Saloon2.png",
+    "Art/All Work/Saloon3.png",
+    "Art/All Work/Mural_Design.png",
+    "Art/All Work/Grocery_Store.mp4",
+    "Art/All Work/CoralinePattern1.jpg",
+    "Art/All Work/CoralinePattern2.jpg",
+    "Art/All Work/CoralinePattern3.jpg",
+    "Art/All Work/CoralinePattern4.png",
+    "Art/All Work/pattern1.jpg",
+    "Art/All Work/pattern2_1.jpg",
+    "Art/All Work/pattern2_2.png",
+    "Art/All Work/pattern2_3.png",
+    "Art/All Work/pattern3_1.png",
+    "Art/All Work/pattern3_2.png",
+    "Art/All Work/pattern3_3.png"
+]*/
+
+let currentImageIndex = 0;
+function openModal(index) {
+    currentImageIndex = index;
+    const modal = document.getElementById("imageModal");
+    const modalImage = document.getElementById("modalImage");
+    modal.style.display = "block";
+    modalImage.src = images[currentImageIndex];
+}
+
+function closeModal() {
+    const modal = document.getElementById("imageModal");
+    modal.style.display = "none";
+}
+
+function changeImage(direction) {
+    currentImageIndex += direction;
+    if (currentImageIndex < 0) {
+        currentImageIndex = images.length - 1; // Loop back to last image
+    } else if (currentImageIndex >= images.length) {
+        currentImageIndex = 0; // Loop back to first image
+    }
+    document.getElementById("modalImage").src = images[currentImageIndex];
+}
+
+/* Close modal when clicking outside of the image */
+window.onclick = function (event) {
+    const modal = document.getElementById("imageModal");
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+}
+
+
+/*// document.addEventListener('DOMContentLoaded', () => {
 
   // select all navigation links
   // const navLinks = document.querySelectorAll('nav a');
@@ -59,28 +120,5 @@ links.forEach(link => {
     }, 500);
   });
 });
-// // loop through each link and attach a click event listener
-// navLinks.forEach(link => {
-//   link.addEventListener('click', e => {
-//     // prevent default link behavior
-//     e.preventDefault();
-
-//     // select the body element and add the fade-out class
-//     const contents = document.querySelector('main');
-//     contents.classList.add('fade-out');
-
-//     // wait for the fade-out animation to finish (0.5 seconds)
-//     setTimeout(() => {
-//       // navigate to the new page
-//       window.location.href = link.href;
-//     }, 500); // 500 milliseconds = 0.5 seconds
-//   });
-// });
-
-// // detect when the new page is loaded and add the fade-in class to the body element
-// document.addEventListener('DOMContentLoaded', () => {
-//   const body = document.querySelector('body');
-//   body.classList.add('fade-in');
-// });
-// });
+*/
 

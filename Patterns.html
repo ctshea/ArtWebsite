@@ -33,18 +33,42 @@
 			<h2>Welcome to my Art Portfolio!</h2>
 			<p>Here you can find some of my latest artwork:</p>
 			<div class="artwork">
-				<img src="Art/All Work/CoralinePattern1.jpg" alt="Coraline Pattern">
-				<img src="Art/All Work/CoralinePattern2.jpg" alt="Coraline Pattern">
-				<img src="Art/All Work/CoralinePattern3.jpg" alt="Coraline Pattern">
-				<img src="Art/All Work/CoralinePattern4.png" alt="Coraline Pattern">
-				<img src="Art/All Work/pattern1.jpg" alt="Pattern">
-				<img src="Art/All Work/pattern2_1.jpg" alt="Pattern">
-				<img src="Art/All Work/pattern2_2.png" alt="Pattern">
-				<img src="Art/All Work/pattern2_3.png" alt="Pattern">
-				<img src="Art/All Work/pattern3_1.png" alt="Pattern">
-				<img src="Art/All Work/pattern3_2.png" alt="Pattern">
-				<img src="Art/All Work/pattern3_3.png" alt="Pattern">
+				<img src="Art/Patterns/CoralinePattern1.jpg" alt="Coraline Pattern" onclick="openModal(0)">
+				<img src="Art/Patterns/CoralinePattern2.jpg" alt="Coraline Pattern" onclick="openModal(1)">
+				<img src="Art/Patterns/CoralinePattern3.jpg" alt="Coraline Pattern" onclick="openModal(2)">
+				<img src="Art/Patterns/CoralinePattern4.png" alt="Coraline Pattern" onclick="openModal(3)">
+				<img src="Art/Patterns/pattern1.jpg" alt="Pattern" onclick="openModal(4)">
+				<img src="Art/Patterns/pattern2_1.jpg" alt="Pattern" onclick="openModal(5)">
+				<img src="Art/Patterns/pattern2_2.png" alt="Pattern" onclick="openModal(6)">
+				<img src="Art/Patterns/pattern2_3.png" alt="Pattern" onclick="openModal(7)">
+				<img src="Art/Patterns/pattern3_1.png" alt="Pattern" onclick="openModal(8)">
+				<img src="Art/Patterns/pattern3_2.png" alt="Pattern" onclick="openModal(9)">
+				<img src="Art/Patterns/pattern3_3.png" alt="Pattern" onclick="openModal(10)">
 			</div>
+
+			<div id="imageModal" class="modal">
+				<span class="close" onclick="closeModal()">&times;</span>
+				<img class="modal-content" id="modalImage">
+
+				<a class="prev" onclick="changeImage(-1)">&#10094;</a>
+				<a class="next" onclick="changeImage(1)">&#10095;</a>
+			</div>
+
+			<script>
+				const images = [
+					"Art/All Work/CoralinePattern1.jpg",
+					"Art/All Work/CoralinePattern2.jpg",
+					"Art/All Work/CoralinePattern3.jpg",
+					"Art/All Work/CoralinePattern4.png",
+					"Art/All Work/pattern1.jpg",
+					"Art/All Work/pattern2_1.jpg",
+					"Art/All Work/pattern2_2.png",
+					"Art/All Work/pattern2_3.png",
+					"Art/All Work/pattern3_1.png",
+					"Art/All Work/pattern3_2.png",
+					"Art/All Work/pattern3_3.png"
+				]
+			</script>
 		</section>
 	</main>
 	<footer>

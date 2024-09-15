@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html>
 <head>
 	<title>ART</title>
@@ -13,7 +14,7 @@
 				<li><a href="Work.html">All Work</a></li>
 				<li><a href="Illustrations.html">Illustrations</a></li>
 				<li><a href="CharacterDesign.html">Character Design</a></li>
-				<li><a href="BackgroundDesign.html"class="active">Background Design</a></li>
+				<li><a href="BackgroundDesign.html" class="active">Background Design</a></li>
 				<li><a href="Patterns.html">Patterns</a></li>
 
 				<li class="dropdown">
@@ -33,11 +34,29 @@
 			<h2>Welcome to my Art Portfolio!</h2>
 			<p>Here you can find some of my latest artwork:</p>
 			<div class="artwork">
-				<img src="Art/Illustrations/Saloon1.png" alt="Saloon">
-				<img src="Art/Illustrations/Saloon2.png" alt="Saloon">
-				<img src="Art/Illustrations/Saloon3.png" alt="Saloon">
-				<img src="Art/Illustrations/Mural_Design.png" alt="Mural">
+				<img src="Art/Illustrations/Saloon1.png" alt="Saloon" onclick="openModal(0)">
+				<img src="Art/Illustrations/Saloon2.png" alt="Saloon" onclick="openModal(1)">
+				<img src="Art/Illustrations/Saloon3.png" alt="Saloon" onclick="openModal(2)">
+				<img src="Art/Illustrations/Mural_Design.png" alt="Mural" onclick="openModal(3)">
 			</div>
+
+			<div id="imageModal" class="modal">
+				<span class="close" onclick="closeModal()">&times;</span>
+				<img class="modal-content" id="modalImage">
+
+				<a class="prev" onclick="changeImage(-1)">&#10094;</a>
+				<a class="next" onclick="changeImage(1)">&#10095;</a>
+			</div>
+
+			<script>
+				const images = [
+					"Art/All Work/Saloon1.png",
+					"Art/All Work/Saloon2.png",
+					"Art/All Work/Saloon3.png",
+					"Art/All Work/Mural_Design.png",
+				]
+			</script>
+
 		</section>
 	</main>
 	<footer>
