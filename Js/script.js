@@ -26,6 +26,11 @@
     "Art/All Work/pattern3_3.png"
 ]*/
 
+function toggleMenu() {
+    const navLinks = document.getElementById('nav-links');
+    navLinks.classList.toggle('open');
+}
+
 let currentImageIndex = 0;
 function openModal(index) {
     currentImageIndex = index;

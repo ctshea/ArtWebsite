@@ -93,7 +93,7 @@ nav li:hover a:not(.active) {
 	text-decoration: none;
 	display: block;
 	color: #fff;
-/*	text-align: left;*/
+	text-align: left;
 	background-color: #333 !important
 }
 
