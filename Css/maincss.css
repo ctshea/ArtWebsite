@@ -8,7 +8,7 @@ header {
 	position:fixed;
 	width:100%;
 	z-index: 2;
-	background-color: #333;
+	background-color: white;
 	color: #fff;
 	padding: 10px;
 	display: flex;
@@ -49,7 +49,7 @@ nav li {
 
 nav li a {
 	display: block;
-	color: #fff;
+	color: black;
 	text-align: center;
 	padding: 14px 16px;
 	text-decoration: none;
@@ -57,7 +57,7 @@ nav li a {
 }
 
 nav a.active {
-	background-color: black;
+	background-color: lightgray;
 }
 
 
@@ -92,20 +92,20 @@ nav li:hover a:not(.active) {
 	padding: 14px 16px;
 	text-decoration: none;
 	display: block;
-	color: #fff;
+	color: black;
 	text-align: left;
-	background-color: #333 !important
+	background-color: white !important
 }
 
 .dropdown-content li a:hover {
 	background-color: gray !important;
 }
 .dropdown-content a.active {
-	background-color: black !important;
+	background-color: lightgray !important;
 }
 
 .dropdown:has(.dropdown-content a.active) .dropbtn {
-	background-color: black; /* Black background for the parent when a dropdown item is selected */
+	background-color: lightgray; /* Black background for the parent when a dropdown item is selected */
 }
 
 /* Show the dropdown content when hovered */
@@ -117,7 +117,7 @@ nav li:hover a:not(.active) {
 	content: "";
 	border-left: 6px solid transparent;
 	border-right: 6px solid transparent;
-	border-top: 6px solid white; /* White arrow pointing down */
+	border-top: 6px solid black; /* White arrow pointing down */
 	margin-left: 8px; /* Space between text and arrow */
 	display: inline-block;
 	vertical-align: middle; /* Aligns the arrow with the text */
@@ -126,7 +126,7 @@ nav li:hover a:not(.active) {
 /* Change arrow direction when hovering over dropdown */
 .dropdown:hover .dropbtn::after {
 	border-top: none;
-	border-bottom: 6px solid white; /* Arrow pointing up */
+	border-bottom: 6px solid black; /* Arrow pointing up */
 }
 
 
@@ -169,8 +169,8 @@ section {
   
   .artwork img, .artwork video {
 	max-width: 100%;
-/*	height: 100%;*/
-	height: auto;
+	height: 100%;
+/*	height: auto;*/
   }
 
 
